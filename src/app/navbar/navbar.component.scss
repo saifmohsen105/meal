@@ -1,0 +1,48 @@
+@import "../../../styles/varaible.scss";
+.container {
+  width: 15%;
+  background-color: #F9FAFB;
+  // height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  li {
+    margin-right: 20px;
+    list-style: none;
+    margin: 1.25rem;
+    width: 100%;
+  }
+  :hover > a {
+    transform: scale(1.047);
+  }
+}
+.links {
+  a {
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 30px;
+    display: block;
+    border-radius: 25px;
+    background-color: $secondy-color;
+    color: $thried-color;
+    transition: 0.7s ease;
+  }
+}
+.links span {
+  margin-left: 5px;
+}
+.container .links li a.active {
+  font-weight: bold;
+  box-shadow: 0 0 30px 0px $secondy-color;
+}

@@ -1,0 +1,66 @@
+<app-tabs-filter></app-tabs-filter>
+<section>
+
+  <!-- repeat card -->
+  <div class="cards" #cards>
+    @for (meal of meal.meals; track $index) {
+    <div class="card" [id]=meal.idMeal>
+      <img [src]="meal.strMealThumb" alt="" width="50%">
+      <div class="content">
+        <h3>{{meal.strMeal}}</h3>
+        <h5> <i class="fa-solid fa-globe"></i> {{meal.strArea}}</h5>
+        <button (click)="getIdCard($event)" (click)="showBox()" #btm>Show Recibes</button>
+      </div>
+    </div>
+    }
+  </div>
+
+  <!-- details meal -->
+  <div #box class="box">
+    <button #btmClose (click)="hideBox()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="right-box">
+      <img [src]="resInformationCard.strMealThumb" alt="" width="50%">
+      <br />
+      <a [href]="resInformationCard.strSource" class="btm-source"> <i class="fa-brands fa-sourcetree"></i> Source</a>
+      <a [href]="resInformationCard.strYoutube" class="btm-youtube"> <i class="fa-brands fa-youtube"></i> Youtube</a>
+    </div>
+    <div class="left-box">
+      <h2>{{resInformationCard.strInstructions}}</h2>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Ingredients </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{resInformationCard.strIngredient1}}</td>
+          <td>{{resInformationCard.strMeasure1}}</td>
+        </tr>
+        <tr>
+          <td>{{resInformationCard.strIngredient2}}</td>
+          <td>{{resInformationCard.strMeasure2}}</td>
+        </tr>
+        <tr>
+          <td>{{resInformationCard.strIngredient3}}</td>
+          <td>{{resInformationCard.strMeasure3}}</td>
+        </tr>
+        <tr>
+          <td>{{resInformationCard.strIngredient4}}</td>
+          <td>{{resInformationCard.strMeasure4}}</td>
+        </tr>
+        <tr>
+          <td>{{resInformationCard.strIngredient5}}</td>
+          <td>{{resInformationCard.strMeasure5}}</td>
+        </tr>
+        <tr>
+          <td>{{resInformationCard.strIngredient6}}</td>
+          <td>{{resInformationCard.strMeasure6}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</section>

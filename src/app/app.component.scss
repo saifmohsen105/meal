@@ -1,0 +1,11 @@
+@use  "../../styles/varaible.scss" as *;
+.container {
+  display: flex;
+}
+.navbar {
+  width: 20%;
+}
+.content {
+  width: 100%;
+  background-color: #f4f2ee;
+}
